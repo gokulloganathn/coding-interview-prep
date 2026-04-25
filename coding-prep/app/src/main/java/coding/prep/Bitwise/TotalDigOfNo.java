@@ -1,4 +1,4 @@
-package org.dsaPractice.Bitwise;
+package coding.prep.Bitwise;
 
 /*
 * get the total digits of number in any base binary,decimal,hexademial,octal

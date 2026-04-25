@@ -1,4 +1,4 @@
-package org.dsaPractice.Strings;
+package coding.prep.Strings;
 
 public class ModifyString {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.dsaPractice.recrsionArrays;
+package coding.prep.recrsionArrays;
 
 import java.util.*;
 import java.lang.*;

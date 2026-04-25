@@ -1,4 +1,4 @@
-package org.dsaPractice.twoDarrays;
+package coding.prep.twoDarrays;
 
 import java.util.Arrays;
 

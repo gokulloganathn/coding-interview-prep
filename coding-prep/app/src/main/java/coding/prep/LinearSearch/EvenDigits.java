@@ -1,4 +1,4 @@
-package org.dsaPractice.LinearSearch;
+package coding.prep.LinearSearch;
 
 public class EvenDigits {
     public static void main(String[] args) {

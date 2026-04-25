@@ -1,4 +1,4 @@
-package org.dsaPractice.Recursion;
+package coding.prep.Recursion;
 
 public class BinarySearch {
     public static void main(String[] args) {

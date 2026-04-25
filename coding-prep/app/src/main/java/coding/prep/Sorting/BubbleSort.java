@@ -1,4 +1,4 @@
-package org.dsaPractice.Sorting;
+package coding.prep.Sorting;
 
 import java.util.Arrays;
 

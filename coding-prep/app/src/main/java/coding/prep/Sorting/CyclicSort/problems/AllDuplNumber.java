@@ -1,4 +1,4 @@
-package org.dsaPractice.Sorting.CyclicSort.problems;
+package coding.prep.Sorting.CyclicSort.problems;
 
 import java.util.Arrays;
 import java.util.HashSet;

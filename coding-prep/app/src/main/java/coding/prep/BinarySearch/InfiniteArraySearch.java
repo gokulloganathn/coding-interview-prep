@@ -1,4 +1,4 @@
-package org.dsaPractice.BinarySearch;
+package coding.prep.BinarySearch;
 
 /*
 * step 1 find the length of array without using arr.length

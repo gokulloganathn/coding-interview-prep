@@ -1,4 +1,4 @@
-package org.dsaPractice.Bitwise;
+package coding.prep.Bitwise;
 
 //- ![img_7.png](img_7.png)
 /*

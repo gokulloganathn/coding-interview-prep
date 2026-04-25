@@ -1,4 +1,4 @@
-package org.dsaPractice.BinarySearch;
+package coding.prep.BinarySearch;
 
 public class BinarySearch {
     public static void main(String[] args) {

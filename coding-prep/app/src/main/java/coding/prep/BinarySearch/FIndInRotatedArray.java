@@ -1,4 +1,4 @@
-package org.dsaPractice.BinarySearch;
+package coding.prep.BinarySearch;
 
 /*
 https://leetcode.com/problems/search-in-rotated-sorted-array/description/

@@ -1,4 +1,4 @@
-package org.dsaPractice.BinarySearch;
+package coding.prep.BinarySearch;
 
 // My submission :
 /*

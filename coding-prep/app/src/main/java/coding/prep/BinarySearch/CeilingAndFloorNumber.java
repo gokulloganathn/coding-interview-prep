@@ -1,4 +1,4 @@
-package org.dsaPractice.BinarySearch;
+package coding.prep.BinarySearch;
 
 //FLOOR  - FIND LARGEST NUMBER SMALLER THAN THE TARGET
 //CEILING - FIND SMALLEST NUMBER LARGER THAN THE TARGET

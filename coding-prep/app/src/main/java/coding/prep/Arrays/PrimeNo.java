@@ -1,4 +1,4 @@
-package org.dsaPractice.Arrays;
+package coding.prep.Arrays;
 
 import java.util.Scanner;
 

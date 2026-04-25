@@ -1,4 +1,4 @@
-package org.dsaPractice.recursionSubSet;
+package coding.prep.recursionSubSet;
 
 public class SkipCharacter {
     public static void main(String[] args) {

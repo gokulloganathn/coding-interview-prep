@@ -1,4 +1,4 @@
-package org.dsaPractice.BinarySearch;
+package coding.prep.BinarySearch;
 
 public class FirstAndLastOccurence {
     public static void main(String[] args) {

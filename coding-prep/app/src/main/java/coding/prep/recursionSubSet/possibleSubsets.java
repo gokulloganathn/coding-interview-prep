@@ -1,4 +1,4 @@
-package org.dsaPractice.recursionSubSet;
+package coding.prep.recursionSubSet;
 
 import java.util.ArrayList;
 

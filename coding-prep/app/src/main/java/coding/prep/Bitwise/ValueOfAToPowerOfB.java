@@ -1,4 +1,4 @@
-package org.dsaPractice.Bitwise;
+package coding.prep.Bitwise;
 
 /*
 Find the value of a^b

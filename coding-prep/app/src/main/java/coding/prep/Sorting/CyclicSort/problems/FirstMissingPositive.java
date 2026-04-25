@@ -1,4 +1,4 @@
-package org.dsaPractice.Sorting.CyclicSort.problems;
+package coding.prep.Sorting.CyclicSort.problems;
 
 
 //https://leetcode.com/problems/first-missing-positive/submissions/1873973619/

@@ -1,4 +1,4 @@
-package org.dsaPractice.BS_Assignments;
+package coding.prep.BS_Assignments;
 
 public class MySqrt {
     public static void main(String[] args) {
