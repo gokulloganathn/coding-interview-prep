@@ -1,21 +1,103 @@
 # Coding Interview Prep - Solved Problems
 
-> A comprehensive collection of coding problems solved with intuitions, explanations, and file references.
+> A comprehensive collection of coding problems solved with intuitions, explanations, and file references, organized by DSA Roadmap.
 
 ---
 
 ## Table of Contents
 
+- [Arrays & Hashing](#arrays--hashing)
+- [Two Pointers](#two-pointers)
+- [Sliding Window](#sliding-window)
+- [Strings](#strings)
+- [Linked List](#linked-list)
+- [Stack](#stack)
+- [Queue & Deque](#queue--deque)
+- [Trees & Tries](#trees--tries)
+- [Heap / Priority Queue](#heap--priority-queue)
+- [Backtracking](#backtracking)
+- [Graphs](#graphs)
+- [Dynamic Programming](#dynamic-programming)
+- [Greedy](#greedy)
+- [Intervals](#intervals)
 - [Binary Search](#binary-search)
 - [Bitwise Operations](#bitwise-operations)
 - [Sorting](#sorting)
 - [Recursion](#recursion)
-- [Recursion on Arrays](#recursion-on-arrays)
-- [Recursion SubSet](#recursion-subset)
-- [Linear Search](#linear-search)
-- [Arrays](#arrays)
-- [Strings](#strings)
-- [Two Dimensional Arrays](#two-dimensional-arrays)
+- [Mathematics & Number Theory](#mathematics--number-theory)
+
+---
+
+## Arrays & Hashing
+
+| # | Problem | Intuition | File |
+|---|---------|-----------|------|
+| 1 | **Reverse Array** | Two pointer approach: swap `arr[start]` with `arr[end]`, move start++, end--. O(n) time, O(1) space. | [ReverseArray.java](coding-prep/app/src/main/java/coding/prep/Arrays/ReverseArray.java) |
+| 2 | **Prime Numbers** | Check divisibility from 2 to √n. If no divisor found, it's prime. | [PrimeNo.java](coding-prep/app/src/main/java/coding/prep/Arrays/PrimeNo.java) |
+| 3 | **Count Numbers with Even Digits** | Count digits using while loop `numb /= 10` or `Math.log10(n) + 1`. Check if count % 2 == 0. | [EvenDigits.java](coding-prep/app/src/main/java/coding/prep/LinearSearch/EvenDigits.java) |
+| 4 | **Richest Customer** | Sum each row using `Arrays.stream(row).sum()`. Track maximum wealth. | [Richest.java](coding-prep/app/src/main/java/coding/prep/twoDarrays/Richest.java) |
+
+---
+
+## Two Pointers
+
+---
+
+## Sliding Window
+
+---
+
+## Strings
+
+| # | Problem | Intuition | File |
+|---|---------|-----------|------|
+| 1 | **String Modification** | String is immutable - each modification creates new object. Use StringBuilder for mutable strings to avoid O(n²) complexity. | [ModifyString.java](coding-prep/app/src/main/java/coding/prep/Strings/ModifyString.java) |
+
+---
+
+## Linked List
+
+---
+
+## Stack
+
+---
+
+## Queue & Deque
+
+---
+
+## Trees & Tries
+
+---
+
+## Heap / Priority Queue
+
+---
+
+## Backtracking
+
+| # | Problem | Intuition | File |
+|---|---------|-----------|------|
+| 1 | **Generate Subsets (Iteration)** | Start with `[[]]`. For each number, duplicate existing subsets and add number to each copy. O(n × 2^n) time. | [SubSetWithIteration.java](coding-prep/app/src/main/java/coding/prep/recursionSubSet/SubSetWithIteration.java) |
+| 2 | **Generate Subsets (Recursion)** | Two choices for each character: include or exclude. Recurse building string. Base: when string empty, print result. | [possibleSubsets.java](coding-prep/app/src/main/java/coding/prep/recursionSubSet/possibleSubsets.java) |
+| 3 | **Skip Character** | If char == 'a', skip it. Otherwise include in result. Build string by concatenating valid chars. | [SkipCharacter.java](coding-prep/app/src/main/java/coding/prep/recursionSubSet/SkipCharacter.java) |
+
+---
+
+## Graphs
+
+---
+
+## Dynamic Programming
+
+---
+
+## Greedy
+
+---
+
+## Intervals
 
 ---
 
@@ -23,7 +105,7 @@
 
 | # | Problem | Intuition | File |
 |---|---------|-----------|------|
-| 1 | **Binary Search (Ascending/Descending)** | Use `start + (end - start) / 2` to avoid overflow. For ascending: move `end = mid - 1` if target < mid, else `start = mid + 1`. For descending, reverse the comparison logic. | [BinarySearch.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/BinarySearch.java) |
+| 1 | **Binary Search (Ascending/Descending)** | Use `start + (end - start) / 2` to avoid overflow. For ascending: move `end = mid - 1` if target < mid, else `start = mid + 1`. For descending, reverse logic. | [BinarySearch.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/BinarySearch.java) |
 | 2 | **Ceiling Number** | Find the smallest number >= target. When `arr[mid] > target`, potential answer found - move end to `mid - 1`. Continue until start exceeds end. | [CeilingAndFloorNumber.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/CeilingAndFloorNumber.java) |
 | 3 | **Ceiling Letter** | Find smallest character > target. Similar to ceiling number but wrap around using `arr[start % arr.length]` for edge cases like target > all chars. | [CeilingLetter.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/CeilingLetter.java) |
 | 4 | **First and Last Occurrence** | Two separate binary searches - one for leftmost (move end = mid - 1 when `arr[mid] >= target`), one for rightmost (move start = mid + 1 when `arr[mid] <= target`). | [FirstAndLastOccurence.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/FirstAndLastOccurence.java) |
@@ -33,6 +115,7 @@
 | 8 | **Find in Rotated Sorted Array** | Find pivot (largest element) first. Then determine which half contains target - check if target is between start and mid or mid and end. | [FIndInRotatedArray.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/FIndInRotatedArray.java) |
 | 9 | **Find in Rotated Array with Duplicates** | Same as above but handle duplicates by checking `arr[start] <= arr[middle]` to decide which half is sorted. | [FIndInRotatedArrayWithDup.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/FIndInRotatedArrayWithDup.java) |
 | 10 | **Largest Sum in Split Array** | Binary search on answer. Min = max element, Max = sum of all. For each mid, count subarrays needed - if sum exceeds mid, start new subarray. | [LargestSumInSplitArray.java](coding-prep/app/src/main/java/coding/prep/BinarySearch/LargestSumInSplitArray.java) |
+| 11 | **My Sqrt** | Binary search to find integer square root. Search range [0, n]. If mid*mid == num, return mid. If mid*mid < num, search right half. | [MySqrt.java](coding-prep/app/src/main/java/coding/prep/BS_Assignments/MySqrt.java) |
 
 ---
 
@@ -79,60 +162,14 @@
 |---|---------|-----------|------|
 | 1 | **Fibonacci** | `fb(n) = fb(n-1) + fb(n-2)`. Base: if n < 2 return n. Golden ratio formula: `(α^n / √5)` where α = (1+√5)/2 | [Fibonnaci.java](coding-prep/app/src/main/java/coding/prep/Recursion/Fibonnaci.java) |
 | 2 | **Binary Search (Recursive)** | Divide array at mid. If `arr[mid] == target` return mid. If target < mid, search left `bs(s, mid-1)`. Else search right `bs(mid+1, e)`. | [BinarySearch.java](coding-prep/app/src/main/java/coding/prep/Recursion/BinarySearch.java) |
+| 3 | **Check if Array Sorted** | Compare `arr[start] <= arr[start+1]`. Recurse with `start+1`. Base: `start == length-2`. | [IsSorted.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/IsSorted.java) |
+| 4 | **Get All Target Indexes** | Add index to list if `arr[i] == target`. Recurse with `i+1`. Combine results from all calls. | [GetAllTrgtIndexes.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/GetAllTrgtIndexes.java) |
+| 5 | **Print Pattern** | Two patterns - inverted and normal. Use recursion to print stars before and after recursive call for different patterns. | [PrintPatternWithRecursio.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/PrintPatternWithRecursio.java) |
+| 6 | **Sort with Recursion** | Implement bubble sort, selection sort, merge sort, quick sort using recursion. Quick sort is not stable. | [SortWithRecc.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/SortWithRecc.java) |
 
 ---
 
-## Recursion on Arrays
-
-| # | Problem | Intuition | File |
-|---|---------|-----------|------|
-| 1 | **Check if Array Sorted** | Compare `arr[start] <= arr[start+1]`. Recurse with `start+1`. Base: `start == length-2`. | [IsSorted.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/IsSorted.java) |
-| 2 | **Get All Target Indexes** | Add index to list if `arr[i] == target`. Recurse with `i+1`. Combine results from all calls. | [GetAllTrgtIndexes.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/GetAllTrgtIndexes.java) |
-| 3 | **Print Pattern** | Two patterns - inverted and normal. Use recursion to print stars before and after recursive call for different patterns. | [PrintPatternWithRecursio.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/PrintPatternWithRecursio.java) |
-| 4 | **Sort with Recursion** | Implement bubble sort, selection sort, merge sort, quick sort using recursion. Quick sort is not stable. | [SortWithRecc.java](coding-prep/app/src/main/java/coding/prep/recrsionArrays/SortWithRecc.java) |
-
----
-
-## Recursion SubSet
-
-| # | Problem | Intuition | File |
-|---|---------|-----------|------|
-| 1 | **Generate Subsets (Iteration)** | Start with `[[]]`. For each number, duplicate existing subsets and add number to each copy. O(n × 2^n) time. | [SubSetWithIteration.java](coding-prep/app/src/main/java/coding/prep/recursionSubSet/SubSetWithIteration.java) |
-| 2 | **Generate Subsets (Recursion)** | Two choices for each character: include or exclude. Recurse building string. Base: when string empty, print result. | [possibleSubsets.java](coding-prep/app/src/main/java/coding/prep/recursionSubSet/possibleSubsets.java) |
-| 3 | **Skip Character** | If char == 'a', skip it. Otherwise include in result. Build string by concatenating valid chars. | [SkipCharacter.java](coding-prep/app/src/main/java/coding/prep/recursionSubSet/SkipCharacter.java) |
-
----
-
-## Linear Search
-
-| # | Problem | Intuition | File |
-|---|---------|-----------|------|
-| 1 | **Count Numbers with Even Digits** | Count digits using while loop `numb /= 10` or `Math.log10(n) + 1`. Check if count % 2 == 0. | [EvenDigits.java](coding-prep/app/src/main/java/coding/prep/LinearSearch/EvenDigits.java) |
-
----
-
-## Arrays
-
-| # | Problem | Intuition | File |
-|---|---------|-----------|------|
-| 1 | **Reverse Array** | Two pointer approach: swap `arr[start]` with `arr[end]`, move start++, end--. O(n) time, O(1) space. | [ReverseArray.java](coding-prep/app/src/main/java/coding/prep/Arrays/ReverseArray.java) |
-| 2 | **Prime Numbers** | Check divisibility from 2 to √n. If no divisor found, it's prime. | [PrimeNo.java](coding-prep/app/src/main/java/coding/prep/Arrays/PrimeNo.java) |
-
----
-
-## Strings
-
-| # | Problem | Intuition | File |
-|---|---------|-----------|------|
-| 1 | **String Modification** | String is immutable - each modification creates new object. Use StringBuilder for mutable strings to avoid O(n²) complexity. | [ModifyString.java](coding-prep/app/src/main/java/coding/prep/Strings/ModifyString.java) |
-
----
-
-## Two Dimensional Arrays
-
-| # | Problem | Intuition | File |
-|---|---------|-----------|------|
-| 1 | **Richest Customer** | Sum each row using `Arrays.stream(row).sum()`. Track maximum wealth. | [Richest.java](coding-prep/app/src/main/java/coding/prep/twoDarrays/Richest.java) |
+## Mathematics & Number Theory
 
 ---
 
@@ -140,17 +177,26 @@
 
 | Category | Count |
 |----------|-------|
-| Binary Search | 10 |
-| Bitwise Operations | 6 |
-| Sorting (Cyclic + Basic) | 10 |
-| Recursion | 2 |
-| Recursion on Arrays | 4 |
-| Recursion SubSet | 3 |
-| Linear Search | 1 |
-| Arrays | 2 |
+| Arrays & Hashing | 4 |
+| Two Pointers | 0 |
+| Sliding Window | 0 |
 | Strings | 1 |
-| Two D Arrays | 1 |
-| **Total** | **40** |
+| Linked List | 0 |
+| Stack | 0 |
+| Queue & Deque | 0 |
+| Trees & Tries | 0 |
+| Heap / Priority Queue | 0 |
+| Backtracking | 3 |
+| Graphs | 0 |
+| Dynamic Programming | 0 |
+| Greedy | 0 |
+| Intervals | 0 |
+| Binary Search | 11 |
+| Bitwise Operations | 6 |
+| Sorting | 10 |
+| Recursion | 6 |
+| Mathematics & Number Theory | 0 |
+| **Total** | **41** |
 
 ---
 
@@ -180,6 +226,26 @@ function solve(params):
     // recursive calls
     return combine(results)
 ```
+
+### Backtracking Pattern
+- Include/exclude choices
+- Explore all possibilities
+- Backtrack when needed
+- Base case: all choices made
+
+---
+
+## Next Steps to Expand
+
+**Topics to add:**
+- Two Pointers (e.g., container with most water, merge sorted arrays)
+- Sliding Window (e.g., longest substring without repeating, min window substring)
+- Linked List (e.g., reverse, merge, cycle detection)
+- Stack (e.g., valid parentheses, next greater element)
+- Trees & Tries (e.g., inorder/preorder/postorder, BST operations)
+- Graphs (e.g., BFS, DFS, Dijkstra, topological sort)
+- Dynamic Programming (e.g., knapsack, coin change, LIS)
+- Greedy (e.g., interval scheduling, activity selection)
 
 ---
 
